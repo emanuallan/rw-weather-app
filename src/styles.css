@@ -1,0 +1,142 @@
+.App {
+	display: grid;
+	place-items: center;
+	background-image: linear-gradient(to right top, #344961, #33516f, #31587c, #2e608b, #276899);
+	min-height: 100vh;
+	height: 100%;
+	width: 100%;
+	color: white;
+}
+
+.weather-app-title {
+	text-align: center;
+}
+
+.pointer {
+	cursor: pointer;
+}
+
+.weather-app {
+	max-width: 768px; /* standard tablet size*/
+	width: 100%;
+}
+
+.weather-card {
+	border-radius: 8px;
+	display: flex;
+	justify-content: space-between;
+	margin-top: 6em;
+	flex-wrap: wrap-reverse;
+	border: 1px solid whitesmoke;
+	padding: 16px;
+	align-items: center;
+}
+
+.flex {
+	display: flex;
+}
+
+.weather-card-text {
+	max-width: 400px;
+}
+
+.weather-card-wrapper {
+	position: relative;
+}
+
+.city-select {
+	color: black;
+}
+
+.weather-icon {
+	height: 300px;
+	width: 300px;
+	border-radius: 16px;
+	margin-left: 32px;
+}
+
+.weather-card-icons {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	margin-top: 8px;
+	width: 100%;
+}
+
+.trash-icon {
+	cursor: pointer;
+	height: 34px;
+	width: 28px;
+	margin-right: 5px;
+}
+
+.refresh-icon {
+	cursor: pointer;
+	height: 34px;
+	width: 28px;
+	margin-left: 5px;
+}
+
+.trash-icon:hover {
+	opacity: 0.7;
+}
+
+.row {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+.column {
+	border-radius: 8px;
+	flex: 1;
+	max-width: 20%;
+	margin: 10px;
+	padding: 10px;
+	border: 1px solid #ccc;
+	text-align: center;
+}
+
+.column:hover {
+	opacity: 0.8;
+}
+
+.column.selected {
+	background: #253445;
+}
+
+.column.city {
+	cursor: pointer;
+	display: grid;
+	place-items: center;
+}
+
+.column.placeholder {
+	border: 2px dashed whitesmoke;
+	opacity: 0.5;
+}
+
+/* Adjust styles for smaller screens */
+@media (max-width: 768px) {
+	.column {
+		max-width: 40%;
+	}
+
+	.weather-icon {
+		margin-left: 0px;
+	}
+
+	.weather-card {
+		display: flex;
+		flex-direction: column-reverse;
+		justify-content: space-between;
+		align-items: center;
+		text-align: center;
+	}
+}
+
+@media (max-width: 576px) {
+	.column {
+		max-width: 100%;
+	}
+}
